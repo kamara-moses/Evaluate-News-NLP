@@ -10,3 +10,16 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+
+#button {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+    background-color: #439edb;
+    color: #fff;
+}
+
+#button:hover {
+    background-color: #f1b9b2;
+}
