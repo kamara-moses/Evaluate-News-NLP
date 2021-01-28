@@ -8,6 +8,9 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
+// call to the meanincloud API
+const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?"
+
 app.get('/', function (req, res) {
     // res.sendFile('dist/index.html')
     res.sendFile(path.resolve('dist/index.html'))
