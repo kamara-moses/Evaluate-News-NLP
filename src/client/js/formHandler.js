@@ -23,7 +23,7 @@ const handleSubmit = async (event) => {
 
     const apiKey = await Client.getKey()
     console.log('WHOLE URL IS: ' + baseURL + apiKey + textURI)
-    const resObj = await Client.getMeaning(baseURL, apiKey, textURI)
+    const resObj = await Client.getCloud(baseURL, apiKey, textURI)
 
     console.log('resObj came back: ')
     console.log(resObj);
@@ -37,18 +37,18 @@ const handleSubmit = async (event) => {
 export { handleSubmit }
 
 
-// const getMeaning = async (baseURL, key, text) => {
-//     const response = await fetch(baseURL + key + text);
-//     try {
-//         const allData = await response.json()
-//         return allData;
-//         console.log(allData);
-//     } catch (error) {
-//         console.log("ERROR in API call: ", error)
-//     }
-// }
+const getCloud = async (baseURL, key, text) => {
+    const response = await fetch(baseURL + key + text);
+    try {
+        const allData = await response.json()
+        return allData;
+        console.log(allData);
+    } catch (error) {
+        console.log("ERROR in API call: ", error)
+    }
+}
 
-// export { getMeaning }
+export { getCloud }
 
 // const getKey = async () => {
 //     const response = await fetch('http://localhost:8081/key');
