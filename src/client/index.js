@@ -1,5 +1,5 @@
 import { getKey } from './js/formHandler'
-import { getMeaning } from './js/formHandler'
+import { getCloud } from './js/formHandler'
 import { handleSubmit } from './js/formHandler'
 import { polarityGet } from './js/formHandler'
 
@@ -16,6 +16,6 @@ alert("I EXIST")
 console.log("CHANGE!!");
 
 export { getKey,
-    getMeaning,
+    getCloud,
     polarityGet,
     handleSubmit }
