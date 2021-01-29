@@ -1,7 +1,10 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 footer {
+    display: flex;
     background-color: #439edb;
     font-weight: 700;
     color: #fff;
     padding: 20px 40px;
-    text-align: center;
+    justify-content: space-between;
 }
