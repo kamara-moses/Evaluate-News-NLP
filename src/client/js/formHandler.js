@@ -22,10 +22,9 @@ const handleSubmit = async (event) => {
     const textURI = '&lang=en&of=json&txt=' + encodeURI(formText)
 
     const apiKey = await Client.getKey()
-    console.log('WHOLE URL IS: ' + baseURL + apiKey + textURI)
+    
     const resObj = await Client.getCloud(baseURL, apiKey, textURI)
 
-    console.log('resObj came back: ')
     console.log(resObj);
    const polarity = await Client.polarityGet(resObj.score_tag)
 
