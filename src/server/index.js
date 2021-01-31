@@ -3,7 +3,6 @@ const express = require("express")
 const mockAPIResponse = require("./mockAPI.js")
 const cors = require("cors");
 const fetch = require("node-fetch")
-const validator = require("validator")
 const dotenv = require("dotenv");
 dotenv.config()
 
