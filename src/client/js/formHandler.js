@@ -99,11 +99,11 @@ function updateUI(polarity, agreement, subjectivity, confidence, irony) {
     if (results) {
       resultsHTML = `
                   <div>
-                  <h1>Our analysis show that:</h1>
+                  <h1>MeaningCloud analysis show that:</h1>
                   <p><span>Polarity: ${polarity.toLowerCase()}</span></p>
-                  <p><i class="fas fa-hand-point-right"></i><span>Confidence: ${confidence.toLowerCase()}%</span></p>
-                  <p><i class="fas fa-hand-point-right"></i><span>Agree or Disagree: ${agreement.toLowerCase()}</span></p>
-                  <p><i class="fas fa-hand-point-right"></i><span>Subjectivity: ${subjectivity.toLowerCase()}</span></p>
+                  <p><span>Confidence: ${confidence.toLowerCase()}%</span></p>
+                  <p><span>Agree or Disagree: ${agreement.toLowerCase()}</span></p>
+                  <p><span>Subjectivity: ${subjectivity.toLowerCase()}</span></p>
                   <p><span>Irony: ${irony.toLowerCase()}</span></p>
                   </div>`
     }
