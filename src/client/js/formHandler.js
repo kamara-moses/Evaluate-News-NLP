@@ -26,11 +26,9 @@ const handleSubmit = async (event) => {
     const resObj = await Client.getCloud(baseURL, apiKey, textURI)
 
     console.log(resObj);
-   const polarity = await Client.polarityGet(resObj.score_tag)
-
-    .then(function(polarity) {
-        document.getElementById('results').innerHTML = polarity
-})
+   const polarity = await Client.polarityGet(resObj.agreement)
+   
+   Client.updateUI(polarity, resObj.agreement, resObj.subjectivity, resObj.confidence, resObj.irony)
 }
 
 export { handleSubmit }
@@ -90,3 +88,28 @@ const polarityGet = async (polarity) => {
 }
 
 export { polarityGet }
+
+function updateUI(polarity, agreement, subjectivity, confidence, irony) {
+    //Clear UI
+    const results = document.getElementById("results");
+    results.innerHTML = "";
+    results.style.display = "block";
+  
+    let resultsHTML;
+    if (results) {
+      resultsHTML = `
+                  <div>
+                  <h1>Our analysis show that:</h1>
+                  <p><span>Polarity: ${polarity.toLowerCase()}</span></p>
+                  <p><i class="fas fa-hand-point-right"></i><span>Confidence: ${confidence.toLowerCase()}%</span></p>
+                  <p><i class="fas fa-hand-point-right"></i><span>Agree or Disagree: ${agreement.toLowerCase()}</span></p>
+                  <p><i class="fas fa-hand-point-right"></i><span>Subjectivity: ${subjectivity.toLowerCase()}</span></p>
+                  <p><span>Irony: ${irony.toLowerCase()}</span></p>
+                  </div>`
+    }
+  
+    //add resultsHTML to DOM
+    results.insertAdjacentHTML("beforeend", resultsHTML);
+  }
+  
+  export { updateUI };
