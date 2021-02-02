@@ -1,4 +1,4 @@
-![NLP]("../../../images/nlp.png")
+<img src="images/nlp.png" alt="NLP">
 
 
 # Project Instructions
