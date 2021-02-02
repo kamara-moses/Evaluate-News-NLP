@@ -26,7 +26,7 @@ const handleSubmit = async (event) => {
     const resObj = await Client.getCloud(baseURL, apiKey, textURI)
 
     console.log(resObj);
-   const polarity = await Client.polarityGet(resObj.agreement)
+   const polarity = await Client.polarityGet(resObj.score_tag)
    
    Client.updateUI(polarity, resObj.agreement, resObj.subjectivity, resObj.confidence, resObj.irony)
 }
@@ -89,7 +89,7 @@ const polarityGet = async (polarity) => {
 
 export { polarityGet }
 
-function updateUI(polarity, agreement, subjectivity, confidence, irony) {
+function updateUI(score_tag, agreement, subjectivity, confidence, irony) {
     //Clear UI
     const results = document.getElementById("results");
     results.innerHTML = "";
@@ -100,7 +100,7 @@ function updateUI(polarity, agreement, subjectivity, confidence, irony) {
       resultsHTML = `
                   <div>
                   <h1>MeaningCloud analysis show that:</h1>
-                  <p><span>Polarity: ${polarity.toLowerCase()}</span></p>
+                  <p><span>Polarity: ${score_tag.toLowerCase()}</span></p>
                   <p><span>Confidence: ${confidence.toLowerCase()}%</span></p>
                   <p><span>Agree or Disagree: ${agreement.toLowerCase()}</span></p>
                   <p><span>Subjectivity: ${subjectivity.toLowerCase()}</span></p>

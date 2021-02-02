@@ -6,8 +6,6 @@ const fetch = require("node-fetch")
 const dotenv = require("dotenv");
 dotenv.config()
 
-let reqtype = "txt";
-
 const app = express()
 
 app.use(cors());
