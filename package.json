@@ -17,6 +17,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
+    "validator": "^13.5.2",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },

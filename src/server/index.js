@@ -25,9 +25,6 @@ app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
 
-// app.get("/test", function (req, res) {
-//     res.send(mockAPIResponse)
-// })
 
 // API Credentials
 const apiKey = process.env.API_KEY
