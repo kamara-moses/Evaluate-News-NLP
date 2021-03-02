@@ -1,5 +1,5 @@
 import { handleSubmit, polarityGet } from './js/formHandler'
-import { checkForURL } from './js/urlChecker'
+import { validateInput } from './js/urlChecker'
 
 
 
@@ -10,9 +10,9 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-console.log(checkForURL);
+console.log(validateInput);
 
 alert("I EXIST")
 console.log("CHANGE!!");
 
-export { handleSubmit, polarityGet, checkForURL }
+export { handleSubmit, polarityGet, validateInput }
